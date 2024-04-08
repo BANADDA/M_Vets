@@ -18,7 +18,7 @@ export function Footer() {
             color="white"
             className=" md:w-7/12 text-center my-3 !text-base"
           >
-            Explore our platform to learn more about how we're transforming livestock health through data and AI. Whether you're a veterinarian, researcher, policymaker, or livestock farmer, together we can make a meaningful impact on global animal welfare.
+            Explore our platform to learn more about how we&apos;re transforming livestock health through data and AI. Whether you&apos;re a veterinarian, researcher, policymaker, or livestock farmer, together we can make a meaningful impact on global animal welfare.
           </Typography>
           <div className="flex w-full md:w-fit gap-3 mt-2 flex-col md:flex-row">
             <Button color="white" size="md">

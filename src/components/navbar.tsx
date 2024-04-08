@@ -6,6 +6,7 @@ import {
   Navbar as MTNavbar,
   Typography,
 } from "@material-tailwind/react";
+import Image from 'next/image';
 import React from "react";
 
 interface NavItemProps {
@@ -94,9 +95,11 @@ export function Navbar() {
           color={isScrolling ? "green" : "white"}
           className="flex items-center gap-2"
         >
-          <img
+          <Image
             src="/image/logo.png"
             alt="M-Vet Logo"
+            width={10}
+            height={10}
             className="h-10 w-auto"
           />
           M-Vet

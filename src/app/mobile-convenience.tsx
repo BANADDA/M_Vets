@@ -37,7 +37,7 @@ export function MobileConvenience() {
         Project Overview
         </Typography>
         <Typography>
-        We at MVet, we're pioneering a transformative approach to livestock 
+        We at MVet, we&apos;re pioneering a transformative approach to livestock 
         health through data-driven solutions and cutting-edge AI technologies. 
         We are based at the Makerere Artificial Intelligence Lab, in 
         collaboration with the Research Consortium on African Swine Fever, 
@@ -45,7 +45,7 @@ export function MobileConvenience() {
         Without Borders, our project aims to revolutionize how we monitor, 
         diagnose, and respond to livestock diseases. 
         <br/><br/>
-        By harnessing real-time crowdsourced animal health data, we're empowering veterinarians, 
+        By harnessing real-time crowdsourced animal health data, we&apos;re empowering veterinarians, 
         researchers, and livestock farmers to make informed decisions and implement 
         precision interventions. From rapid point-of-care diagnostics to image-based 
         disease diagnosis and crowdsourced real-time national syndromic surveillance. 

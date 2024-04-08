@@ -17,7 +17,7 @@ export function Partners() {
           variant="base"
           className="mx-auto max-w-5xl !text-gray-700 lg:px-8 mb-10"
         >
-          M-Vet succeeds thanks to valuable partnerships. We collaborate with top institutions in agriculture, tech, and research, including the Makerere Artificial Intelligence Lab, the Research Consortium on African Swine Fever, the National Livestock Research & Resources Institute, and Veterinarians Without Borders. Through these collaborations, we harness expertise, resources, and networks to innovate and make an impact in livestock health. Together, we're committed to transforming livestock management with data-driven solutions and advanced AI technologies.
+          M-Vet succeeds thanks to valuable partnerships. We collaborate with top institutions in agriculture, tech, and research, including the Makerere Artificial Intelligence Lab, the Research Consortium on African Swine Fever, the National Livestock Research & Resources Institute, and Veterinarians Without Borders. Through these collaborations, we harness expertise, resources, and networks to innovate and make an impact in livestock health. Together, we&apos;re committed to transforming livestock management with data-driven solutions and advanced AI technologies.
         </Typography>
 
         <div className="flex flex-col md:flex-row gap-6 max-w-6xl mx-auto">

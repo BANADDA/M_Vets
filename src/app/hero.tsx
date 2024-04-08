@@ -10,7 +10,7 @@ function Hero() {
       <header
         className="grid !min-h-[49rem] px-8 bg-cover bg-center bg-no-repeat relative"
         style={{
-          backgroundImage: "url('/image/bg.png')",
+          backgroundImage: "url(&apos;/image/bg.png&apos;)",
           position: "relative",
         }}
       >
@@ -30,7 +30,7 @@ function Hero() {
               className="mb-7 !text-white md:pr-8 xl:pr-2 font-medium"
             >
               The Mobile Vet system (M-Vet) is designed to revolutionize livestock health through data and AI, empowering 
-              stakeholders across Uganda's agriculture sector. By digitizing animal health and 
+              stakeholders across Uganda&apos;s agriculture sector. By digitizing animal health and 
               production tracking, facilitating informed decision-making for farmers, frontline 
               veterinarians, and national livestock agencies.
             </Typography>
