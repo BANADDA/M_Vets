@@ -12,25 +12,26 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@heroicons/react": "^2.0.18",
-    "@material-tailwind/react": "2.1.2",
-    "leaflet": "^1.9.4",
-    "next": "13.4.0",
-    "react": "18",
-    "react-dom": "18",
-    "react-leaflet": "^4.2.1"
+    "@heroicons/react": "",
+    "@material-tailwind/react": "^2.1.9",
+    "@material-ui/core": "",
+    "leaflet": "",
+    "next": "",
+    "react": "",
+    "react-dom": "",
+    "react-leaflet": ""
   },
   "devDependencies": {
-    "@types/leaflet": "^1.9.9",
-    "@types/node": "20",
-    "@types/react": "18",
-    "@types/react-dom": "18",
-    "@types/react-leaflet": "^3.0.0",
-    "autoprefixer": "10",
-    "eslint": "8",
-    "eslint-config-next": "13.5.4",
-    "postcss": "8",
-    "tailwindcss": "3",
-    "typescript": "5"
+    "@types/leaflet": "",
+    "@types/node": "",
+    "@types/react": "",
+    "@types/react-dom": "",
+    "@types/react-leaflet": "",
+    "autoprefixer": "",
+    "eslint": "",
+    "eslint-config-next": "",
+    "postcss": "",
+    "tailwindcss": "",
+    "typescript": ""
   }
 }

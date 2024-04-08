@@ -9,19 +9,13 @@ import {
 import Image from 'next/image';
 import React from "react";
 
-interface NavItemProps {
-  children: React.ReactNode;
-  href?: string;
-  onClick?: () => void; // Add onClick prop
-}
-
-function NavItem({ children, href, onClick }: NavItemProps) {
+function NavItem({ children, href, onClick }) {
   return (
     <li>
       <Typography
         as="a"
         href={href || "#"}
-        onClick={onClick} // Attach onClick event
+        onClick={onClick}
         target={href ? "_blank" : "_self"}
         variant="small"
         className="font-bold"
@@ -61,7 +55,6 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Function to handle navigation to the "Who We Are" section
   const navigateToWhoWeAre = () => {
     const section = document.getElementById("about-us");
     if (section) {
@@ -69,7 +62,6 @@ export function Navbar() {
     }
   };
 
-  // Function to handle navigation to the "What We Do" section
   const navigateToWhatWeDo = () => {
     const section = document.getElementById("we-do");
     if (section) {
@@ -109,9 +101,7 @@ export function Navbar() {
           }`}
         >
           <NavItem>Home</NavItem>
-          {/* Modify the "Who We Are" NavItem */}
           <NavItem onClick={navigateToWhoWeAre}>Who We Are</NavItem>
-          {/* Modify the "What We Do" NavItem */}
           <NavItem onClick={navigateToWhatWeDo}>What We Do</NavItem>
         </ul>
         <div className="hidden gap-2 lg:flex lg:items-end">
@@ -153,9 +143,7 @@ export function Navbar() {
         <div className="container mx-auto mt-4 rounded-lg border-t border-blue-green-50 bg-white px-6 py-5">
           <ul className="flex flex-col text-black gap-4 text-blue-green-900">
             <NavItem>Home</NavItem>
-            {/* Modify the "Who We Are" NavItem */}
             <NavItem onClick={navigateToWhoWeAre}>Who We Are</NavItem>
-            {/* Modify the "What We Do" NavItem */}
             <NavItem onClick={navigateToWhatWeDo}>What We Do</NavItem>
           </ul>
           <div className="mt-4 flex items-center gap-2">

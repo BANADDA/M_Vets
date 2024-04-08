@@ -1,13 +1,7 @@
+import { Typography } from "@material-tailwind/react";
 import React from "react";
 
-import { Typography } from "@material-tailwind/react";
-
-interface BackgroundCardProps {
-  title: string;
-  children: React.ReactNode;
-}
-
-export function BackgroundCard({ title, children }: BackgroundCardProps) {
+export function BackgroundCard({ title, children }) {
   return (
     <div className="grid place-items-center h-full px-8 py-6 bg-gray-900 rounded-xl">
       <div>
@@ -24,4 +18,5 @@ export function BackgroundCard({ title, children }: BackgroundCardProps) {
     </div>
   );
 }
+
 export default BackgroundCard;

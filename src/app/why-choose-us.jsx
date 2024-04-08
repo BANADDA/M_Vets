@@ -7,16 +7,8 @@ import {
 } from "@heroicons/react/24/solid";
 import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
-import React from "react";
 
-
-interface OptionProps {
-  icon: React.ElementType;
-  title: string;
-  children: React.ReactNode;
-}
-
-function Option({ icon: Icon, title, children }: OptionProps) {
+function Option({ icon: Icon, title, children }) {
   return (
     <div className="flex gap-4">
       <div className="mb-4">

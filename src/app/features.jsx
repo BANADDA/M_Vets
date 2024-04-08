@@ -1,9 +1,8 @@
 "use client";
 
+import FeatureCard from "@/components/feature-card";
 import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
-
-import FeatureCard from "@/components/feature-card";
 
 import {
   BeakerIcon,
@@ -53,7 +52,7 @@ export function Features() {
                 Project Overview
               </Typography>
               <Typography
-                variant="paragraph"
+                
                 className="mb-5 max-w-1/2 px-4 text-left text-lg !text-gray-700 lg:pr-32"
               >
                 MVet is a project that is developing data-driven solutions to improve livestock 
@@ -66,7 +65,7 @@ export function Features() {
             </div>
           </div>
           <div className="lg:col-span-3">
-            <Typography variant="lead" className="font-semibold">Our beneficiaries</Typography> 
+            <Typography className="font-semibold">Our beneficiaries</Typography> 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
               {FEATURES.map(({ icon, title, description }) => (
                 <FeatureCard key={title} icon={icon} title={title}>

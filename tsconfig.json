@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "lib": [
       "dom",
       "dom.iterable",
@@ -34,7 +34,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "src/components/Typography.jsx", "src/components/testimonial-card.jsx", "src/components/navbar.jsx", "src/components/layout.jsx", "src/components/info-card.jsx", "src/components/index.js", "src/components/footer.jsx", "src/components/fixed-plugin.jsx", "src/components/feature-card.jsx", "src/components/background-card.jsx", "src/app/why-choose-us.jsx", "src/app/video-intro.jsx", "src/app/testimonials.jsx", "src/app/partners.jsx", "src/app/page.jsx", "src/app/mobile-convenience.jsx", "src/app/layout.jsx", "src/app/index.jsx", "src/app/hero.jsx", "src/app/features.jsx"  ],
   "exclude": [
     "node_modules"
   ]
