@@ -7,7 +7,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import Image from 'next/image';
-import React from "react";
+import { useEffect, useState } from 'react';
 
 function NavItem({ children, href, onClick }) {
   return (
@@ -27,31 +27,28 @@ function NavItem({ children, href, onClick }) {
 }
 
 export function Navbar() {
-  const [open, setOpen] = React.useState(false);
-  const [isScrolling, setIsScrolling] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
 
-  function handleOpen() {
-    setOpen((cur) => !cur);
-  }
+  useEffect(() => {
+    const handleResize = () => {
+      if (typeof window !== 'undefined') {
+        window.innerWidth >= 960 && setOpen(false);
+      }
+    };
 
-  React.useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpen(false)
-    );
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  React.useEffect(() => {
-    function handleScroll() {
-      if (window.scrollY > 0) {
-        setIsScrolling(true);
-      } else {
-        setIsScrolling(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (typeof window !== 'undefined') {
+        setIsScrolling(window.scrollY > 0);
       }
-    }
+    };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -129,7 +126,7 @@ export function Navbar() {
         <IconButton
           variant="text"
           color={isScrolling ? "green" : "white"}
-          onClick={handleOpen}
+          onClick={() => setOpen(!open)}
           className="ml-auto inline-block lg:hidden"
         >
           {open ? (
