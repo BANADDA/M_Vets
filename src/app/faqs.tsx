@@ -1,7 +1,6 @@
 "use client";
 
-import React from "react";
-import { Typography, Card } from "@material-tailwind/react";
+import { Card, Typography } from "@material-tailwind/react";
 
 const FAQS = [
   {
@@ -42,9 +41,7 @@ export function Faqs() {
             variant="lead"
             className="mx-auto mb-24 !text-gray-500 lg:w-3/5"
           >
-            A lot of people don&apos;t appreciate the moment until it&apos;s
-            passed. I&apos;m not trying my hardest, and I&apos;m not trying to
-            do
+            A lot of people don&apos;t appreciate the moment until it&apos;s passed. I&apos;m not trying my hardest, and I&apos;m not trying to do
           </Typography>
         </div>
 
