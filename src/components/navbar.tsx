@@ -98,9 +98,8 @@ export function Navbar() {
           <Image
             src="/image/logo.png"
             alt="M-Vet Logo"
-            width={10}
-            height={10}
-            className="h-10 w-auto"
+            width={35}
+            height={35}
           />
           M-Vet
         </Typography>

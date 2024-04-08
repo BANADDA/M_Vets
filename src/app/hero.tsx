@@ -10,7 +10,7 @@ function Hero() {
       <header
         className="grid !min-h-[49rem] px-8 bg-cover bg-center bg-no-repeat relative"
         style={{
-          backgroundImage: "url(&apos;/image/bg.png&apos;)",
+          backgroundImage: "url(/image/bg.png)",
           position: "relative",
         }}
       >
