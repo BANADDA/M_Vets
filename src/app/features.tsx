@@ -44,6 +44,7 @@ export function Features() {
               src="/image/market.jpg"
               className="h-full max-h-[500px] w-full object-cover rounded-xl"
               alt="online course"
+              // Comment
             />
           </div>
           <div className="col-span-2 flex flex-col justify-between">
