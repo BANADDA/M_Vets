@@ -100,6 +100,7 @@ export function Navbar() {
           <NavItem>Home</NavItem>
           <NavItem onClick={navigateToWhoWeAre}>Who We Are</NavItem>
           <NavItem onClick={navigateToWhatWeDo}>What We Do</NavItem>
+          <NavItem onClick={navigateToWhatWeDo}>Blog</NavItem>
         </ul>
         <div className="hidden gap-2 lg:flex lg:items-end">
           <IconButton
@@ -142,6 +143,7 @@ export function Navbar() {
             <NavItem>Home</NavItem>
             <NavItem onClick={navigateToWhoWeAre}>Who We Are</NavItem>
             <NavItem onClick={navigateToWhatWeDo}>What We Do</NavItem>
+            <NavItem onClick={navigateToWhatWeDo}>Blog</NavItem>
           </ul>
           <div className="mt-4 flex items-center gap-2">
             <a href="">
