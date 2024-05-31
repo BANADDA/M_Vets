@@ -18,21 +18,19 @@ export function Footer() {
             color="white"
             className=" md:w-7/12 text-center my-3 !text-base"
           >
-            Explore our platform to learn more about how we&apos;re transforming livestock health through data and AI. Whether you&apos;re a veterinarian, researcher, policymaker, or livestock farmer, together we can make a meaningful impact on global animal welfare.
+            Explore our platform to learn more about how we&apos;re transforming
+            livestock health through data and AI. Whether you&apos;re a
+            veterinarian, researcher, policymaker, or livestock farmer, together
+            we can make a meaningful impact on global animal welfare.
           </Typography>
           <div className="flex w-full md:w-fit gap-3 mt-2 flex-col md:flex-row">
             <Button color="white" size="md">
-            Explore M-Vet
+              Explore M-Vet
             </Button>
           </div>
         </div>
         <div className="flex flex-col md:flex-row items-center !justify-between">
-          <Typography
-            as="a"
-            href=""
-            variant="h6"
-            className="text-gray-900"
-          >
+          <Typography as="a" href="" variant="h6" className="text-gray-900">
             M-Vet
           </Typography>
           <ul className="flex justify-center my-4 md:my-0 w-max mx-auto items-center gap-4">
@@ -51,29 +49,33 @@ export function Footer() {
             ))}
           </ul>
           <div className="flex w-fit justify-center gap-2">
-            <IconButton size="sm" color="gray" variant="text">
-              <i className="fa-brands fa-twitter text-lg" />
-            </IconButton>
-            <IconButton size="sm" color="gray" variant="text">
-              <i className="fa-brands fa-youtube text-lg" />
-            </IconButton>
-            <IconButton size="sm" color="gray" variant="text">
-              <i className="fa-brands fa-instagram text-lg" />
-            </IconButton>
-            <IconButton size="sm" color="gray" variant="text">
-              <i className="fa-brands fa-github text-lg" />
-            </IconButton>
+            <a href="https://x.com/">
+              <IconButton size="sm" color="gray" variant="text">
+                <i className="fa-brands fa-twitter text-lg" />
+              </IconButton>
+            </a>
+            <a href="https://youtube.com/">
+              <IconButton size="sm" color="gray" variant="text">
+                <i className="fa-brands fa-youtube text-lg" />
+              </IconButton>
+            </a>
+            <a href="https://www.instagram.com/">
+              <IconButton size="sm" color="gray" variant="text">
+                <i className="fa-brands fa-instagram text-lg" />
+              </IconButton>
+            </a>
+            <a href="https://github.com/">
+              <IconButton size="sm" color="gray" variant="text">
+                <i className="fa-brands fa-github text-lg" />
+              </IconButton>
+            </a>
           </div>
         </div>
         <Typography
           color="blue-gray"
           className="text-center mt-12 font-normal !text-gray-700"
         >
-          &copy; {CURRENT_YEAR} A Product{" "}
-          <a href="">
-            Of M-Vet
-          </a>
-          .
+          &copy; {CURRENT_YEAR} A Product <a href="">Of M-Vet</a>.
         </Typography>
       </div>
     </footer>
