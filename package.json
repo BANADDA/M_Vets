@@ -19,7 +19,8 @@
     "next": "",
     "react": "",
     "react-dom": "",
-    "react-leaflet": ""
+    "react-leaflet": "",
+    "react-leaflet-cluster": "^2.1.0"
   },
   "devDependencies": {
     "@types/leaflet": "",
