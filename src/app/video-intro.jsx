@@ -255,13 +255,15 @@ const defaultIcon = new L.Icon({
 });
 
 export function MapIntro() {
+  const mapTilerAccessToken = 'XQrQOzTDvYlxRFpruVNU'; // Replace with your MapTiler access token
+
   return (
     <div className="p-8">
       <div className="w-full container px-5 overflow-hidden rounded-xl relative mx-auto mt-6 h-auto max-w-6xl">
         <MapContainer center={[1.3733, 32.2903]} zoom={7} scrollWheelZoom={true} className="w-full h-800 rounded-xl" style={{ height: "500px" }}>
           <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url={`https://api.maptiler.com/maps/streets/256/{z}/{x}/{y}.png?key=${mapTilerAccessToken}`}
+            attribution='&copy; <a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a> & <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
           />
           <MarkerClusterGroup>
             {districts.map(district =>
