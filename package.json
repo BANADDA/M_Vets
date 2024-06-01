@@ -15,6 +15,14 @@
     "@heroicons/react": "",
     "@material-tailwind/react": "^2.1.9",
     "@material-ui/core": "",
+    "@types/leaflet": "",
+    "@types/node": "^20.13.0",
+    "@types/react": "",
+    "@types/react-dom": "",
+    "@types/react-leaflet": "",
+    "eslint": "",
+    "eslint-config-next": "",
+    "typescript": "^5.4.5",
     "autoprefixer": "^10.4.19",
     "leaflet": "^1.9.4",
     "next": "",
@@ -28,13 +36,5 @@
     "tailwindcss": "^3.4.3"
   },
   "devDependencies": {
-    "@types/leaflet": "",
-    "@types/node": "^20.13.0",
-    "@types/react": "",
-    "@types/react-dom": "",
-    "@types/react-leaflet": "",
-    "eslint": "",
-    "eslint-config-next": "",
-    "typescript": "^5.4.5"
   }
 }
