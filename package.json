@@ -20,10 +20,10 @@
     "@types/react": "",
     "@types/react-dom": "",
     "@types/react-leaflet": "",
+    "autoprefixer": "^10.4.19",
     "eslint": "",
     "eslint-config-next": "",
-    "typescript": "^5.4.5",
-    "autoprefixer": "^10.4.19",
+    "glob": "^10.4.1",
     "leaflet": "^1.9.4",
     "next": "",
     "postcss": "^8.4.38",
@@ -32,9 +32,12 @@
     "react-dom": "",
     "react-leaflet": "^4.2.1",
     "react-leaflet-cluster": "^2.1.0",
+    "react-responsive-carousel": "^3.2.23",
+    "react-slick": "^0.30.2",
     "sharp": "^0.33.4",
-    "tailwindcss": "^3.4.3"
-  },
-  "devDependencies": {
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.1.4",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.5"
   }
 }
