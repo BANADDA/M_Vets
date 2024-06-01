@@ -20,7 +20,8 @@
     "react": "",
     "react-dom": "",
     "react-leaflet": "^4.2.1",
-    "react-leaflet-cluster": "^2.1.0"
+    "react-leaflet-cluster": "^2.1.0",
+    "sharp": "^0.33.4"
   },
   "devDependencies": {
     "@types/leaflet": "",
@@ -32,7 +33,7 @@
     "eslint": "",
     "eslint-config-next": "",
     "postcss": "",
-    "tailwindcss": "",
+    "tailwindcss": "^3.4.3",
     "typescript": ""
   }
 }
