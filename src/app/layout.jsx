@@ -1,5 +1,5 @@
-import { FixedPlugin, Layout } from "@/components";
 import { Roboto } from "next/font/google";
+import { FixedPlugin, Layout } from "../components";
 import "./globals.css";
 
 const roboto = Roboto({
