@@ -1,6 +1,6 @@
 // Other imports remain the same
-import { Footer, Navbar } from "..components";
 import dynamic from 'next/dynamic';
+import { Footer, Navbar } from "../components";
 import Features from "./features";
 import Hero from "./hero";
 import Partners from "./partners";
