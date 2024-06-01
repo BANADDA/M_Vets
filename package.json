@@ -17,11 +17,15 @@
     "@material-ui/core": "",
     "leaflet": "^1.9.4",
     "next": "",
+    "postcss-preset-env": "^9.5.14",
     "react": "",
     "react-dom": "",
     "react-leaflet": "^4.2.1",
     "react-leaflet-cluster": "^2.1.0",
-    "sharp": "^0.33.4"
+    "sharp": "^0.33.4",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3"
   },
   "devDependencies": {
     "@types/leaflet": "",
@@ -29,11 +33,8 @@
     "@types/react": "",
     "@types/react-dom": "",
     "@types/react-leaflet": "",
-    "autoprefixer": "",
     "eslint": "",
     "eslint-config-next": "",
-    "postcss": "",
-    "tailwindcss": "^3.4.3",
     "typescript": ""
   }
 }
