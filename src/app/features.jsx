@@ -1,8 +1,8 @@
 "use client";
 
-import FeatureCard from "@/components/feature-card";
 import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
+import FeatureCard from "../components/feature-card";
 
 import {
   BeakerIcon,
