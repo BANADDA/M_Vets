@@ -1,14 +1,13 @@
-// data/teamData.js
 const teamMembers = [
+  {
+    name: 'Daniel Mutembesa',
+    position: 'Project Lead',
+    bio: 'Daniel is the driving force behind the project, leveraging his extensive experience in project management and leadership to ensure successful outcomes.'
+  },
   {
     name: 'Lilian Nabukera',
     position: 'Project Admin',
     bio: 'Lilian ensures smooth operations and effective project management with her exceptional leadership skills.'
-  },
-  {
-    name: 'Mubarak Banadda',
-    position: 'Data & ML Engineer',
-    bio: 'Mubarak develops innovative data solutions and drives data-driven projects with his passion for machine learning.'
   },
   {
     name: 'Hellen Nammulinda',
@@ -19,6 +18,11 @@ const teamMembers = [
     name: 'Chodrine',
     position: 'Data & ML Engineer',
     bio: 'Chodrine specializes in creating cutting-edge data solutions and solving complex problems with machine learning.'
+  },
+  {
+    name: 'Mubarak Banadda',
+    position: 'Data & ML Engineer',
+    bio: 'Mubarak develops innovative data solutions and drives data-driven projects with his passion for machine learning.'
   },
   {
     name: 'Tobius',

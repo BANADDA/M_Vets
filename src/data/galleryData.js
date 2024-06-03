@@ -1,18 +1,51 @@
 // src/data/galleryData.js
-import imagePaths from './imagePaths';
-
 const galleryData = [
-  { title: 'Feeding Time', images: imagePaths.slice(0, 2), description: 'Cows being fed.', size: 'large' },
-  { title: 'Vaccination', images: imagePaths.slice(2, 4), description: 'Routine checkup.', size: 'medium' },
-  { title: 'Farm Visit', images: imagePaths.slice(4, 6), description: 'Inspecting livestock.', size: 'medium' },
-  { title: 'Grazing', images: imagePaths.slice(6, 8), description: 'Open field grazing.', size: 'large' },
-  { title: 'Milk Collection', images: imagePaths.slice(8, 10), description: 'Daily harvest.', size: 'medium' },
-  { title: 'Vet Training', images: imagePaths.slice(10, 12), description: 'Skill development.', size: 'medium' },
-  { title: 'Community Meeting', images: imagePaths.slice(12, 14), description: 'Local engagement.', size: 'medium' },
-  { title: 'Healthy Herd', images: imagePaths.slice(14, 16), description: 'Strong livestock.', size: 'large' },
-  { title: 'Barn Maintenance', images: imagePaths.slice(16, 18), description: 'Clean and tidy barns.', size: 'medium' },
-  { title: 'Equipment Check', images: imagePaths.slice(18, 20), description: 'Ensuring everything works.', size: 'medium' },
-  { title: 'Feeding Time', images: imagePaths.slice(20, 22), description: 'Cows being fed.', size: 'medium' },
+  {
+    title: 'M-Vet Project Team',
+    images: [
+      '/image/gallery/image_1.jpg',
+      '/image/gallery/image_2.jpg',
+      '/image/gallery/image_3.jpg',
+      '/image/gallery/image_4.jpg',
+      '/image/gallery/image_5.jpg'
+    ],
+    description: 'M-Vet Project Team developing the platform',
+    size: 'large',
+    tag: 'M-Vet Project Team developing the platform'
+  },
+  {
+    title: 'Collaborative Meetings',
+    images: [
+      '/image/gallery/image_1.jpg',
+      '/image/gallery/image_2.jpg',
+      '/image/gallery/image_3.jpg',
+      '/image/gallery/image_4.jpg',
+      '/image/gallery/image_5.jpg'
+    ],
+    description: 'Collaborative meetings for data protocols & platform development with Senior Veterinarians at Molecular Genomics Epidemiology Lab',
+    size: 'large',
+    tag: 'Collaborative meetings for data protocols & platform development with Senior Veterinarians at Molecular Genomics Epidemiology Lab'
+  },
+  {
+    title: 'NARO Visit',
+    images: [
+      '/image/gallery/image_1.jpg',
+      '/image/gallery/image_2.jpg'
+    ],
+    description: 'National Livestock Research and Resources Institute - NARO. Deploying a dashboard as part of our "Data-in-Action" community engagement approach to ML datasets.',
+    size: 'medium',
+    tag: 'National Livestock Research and Resources Institute - NARO. Deploying a dashboard as part of our "Data-in-Action" community engagement approach to ML datasets'
+  },
+  {
+    title: 'Field Deployment',
+    images: [
+      '/image/gallery/image_1.jpg',
+      '/image/gallery/image_2.jpg'
+    ],
+    description: 'Field deployment trainings and workshops with veterinarians.',
+    size: 'medium',
+    tag: 'Field deployment trainings and workshops with veterinarians.'
+  },
 ];
 
 export default galleryData;
