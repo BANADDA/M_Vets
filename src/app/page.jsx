@@ -1,6 +1,7 @@
 // Other imports remain the same
 import dynamic from 'next/dynamic';
 import { Footer, Navbar } from "../components";
+import Gallery from '../components/Gallery';
 import Team from '../components/Team';
 import Features from "./features";
 import Hero from "./hero";
@@ -15,9 +16,9 @@ export default function Campaign() {
     <>
       <Navbar />
       <Hero />
-      <VideoIntroWithNoSSR /> {/* Use the dynamically imported version */}
+      <VideoIntroWithNoSSR />
       <Features />
-      {/* <Gallery /> */}
+      <Gallery />
       <Partners />
       <WhyChooseUs />
       <Team />
