@@ -1,42 +1,40 @@
 // data/teamData.js
 const teamMembers = [
-    {
-      name: 'Daniel Mutembesa',
-      position: 'CEO',
-      image: '/image/john.jpg',
-      bio: 'John is the CEO with 10 years of experience in the tech industry.'
-    },
-    {
-      name: 'Hellen Nammulinda',
-      position: 'CTO',
-      image: '/image/jane.jpg',
-      bio: 'Jane is the CTO with 15 years of experience in software development.'
-    },
-    {
-      name: 'Hewit Tusiime',
-      position: 'CEO',
-      image: '/image/john.jpg',
-      bio: 'John is the CEO with 10 years of experience in the tech industry.'
-    },
-    {
-      name: 'Mubarak Banadda',
-      position: 'CTO',
-      image: '/image/jane.jpg',
-      bio: 'Jane is the CTO with 15 years of experience in software development.'
-    },
-    {
-      name: 'Daniel Mutembesa',
-      position: 'CEO',
-      image: '/image/john.jpg',
-      bio: 'John is the CEO with 10 years of experience in the tech industry.'
-    },
-    {
-      name: 'Daniel Mutembesa',
-      position: 'CEO',
-      image: '/image/john.jpg',
-      bio: 'John is the CEO with 10 years of experience in the tech industry.'
-    }
-  ];
-  
-  export default teamMembers;
-  
+  {
+    name: 'Lilian Nabukera',
+    position: 'Project Admin',
+    bio: 'Lilian ensures smooth operations and effective project management with her exceptional leadership skills.'
+  },
+  {
+    name: 'Mubarak Banadda',
+    position: 'Data & ML Engineer',
+    bio: 'Mubarak develops innovative data solutions and drives data-driven projects with his passion for machine learning.'
+  },
+  {
+    name: 'Hellen Nammulinda',
+    position: 'Data & ML Engineer',
+    bio: 'Hellen leverages her software development experience to create intelligent AI systems.'
+  },
+  {
+    name: 'Chodrine',
+    position: 'Data & ML Engineer',
+    bio: 'Chodrine specializes in creating cutting-edge data solutions and solving complex problems with machine learning.'
+  },
+  {
+    name: 'Tobius',
+    position: 'Data & ML Engineer',
+    bio: 'Tobius excels in developing high-quality machine learning models and driving impactful data initiatives.'
+  },
+  {
+    name: 'Hewit Tusiime',
+    position: 'Deployment Engineer and User Engagement',
+    bio: 'Hewit ensures seamless deployment and engages users with effective, user-friendly solutions.'
+  },
+  {
+    name: 'Joel',
+    position: 'Hardware Engineer',
+    bio: 'Joel designs and implements robust hardware systems that integrate with our software.'
+  }
+];
+
+export default teamMembers;

@@ -1,5 +1,4 @@
 // components/Team.jsx
-
 import teamMembers from "../data/teamData";
 
 export function Team() {
@@ -9,11 +8,6 @@ export function Team() {
       <div className="team-members grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {teamMembers.map(member => (
           <div key={member.name} className="team-member bg-white p-6 rounded-lg shadow-lg">
-            <img
-              src={member.image}
-              alt={member.name}
-              className="w-40 h-w-40 mx-auto rounded-full mb-4"
-            />
             <h3 className="text-xl font-semibold text-center">{member.name}</h3>
             <p className="text-center text-gray-600">{member.position}</p>
             <p className="text-center text-gray-700 mt-2">{member.bio}</p>
