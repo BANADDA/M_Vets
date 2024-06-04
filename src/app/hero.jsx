@@ -50,14 +50,15 @@ function Hero() {
                   alt="metamask"
                   className="w-6 h-6 text-white"
                 />
-                Explore M-Vet
+                <a href="https://m-vets-dashboard-q73w.vercel.app/">
+                Explore M-Vet</a>
               </Button>
             </div>
           </div>
           <Image
-            width={470}
-            height={576}
-            src="/image/iphones.png"
+            width={300}
+            height={300}
+            src="/image/phone_1.png"
             alt="team work"
             className="col-span-1 my-20 h-full max-h-[30rem] -translate-y-32 md:max-h-[36rem] lg:my-0 lg:ml-auto lg:max-h-[40rem] lg:translate-y-0"
           />

@@ -7,21 +7,15 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import Image from 'next/image';
-import React from "react";
+import { useEffect, useState } from 'react';
 
-interface NavItemProps {
-  children: React.ReactNode;
-  href?: string;
-  onClick?: () => void; // Add onClick prop
-}
-
-function NavItem({ children, href, onClick }: NavItemProps) {
+function NavItem({ children, href, onClick }) {
   return (
     <li>
       <Typography
         as="a"
         href={href || "#"}
-        onClick={onClick} // Attach onClick event
+        onClick={onClick}
         target={href ? "_blank" : "_self"}
         variant="small"
         className="font-bold"
@@ -33,35 +27,31 @@ function NavItem({ children, href, onClick }: NavItemProps) {
 }
 
 export function Navbar() {
-  const [open, setOpen] = React.useState(false);
-  const [isScrolling, setIsScrolling] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
 
-  function handleOpen() {
-    setOpen((cur) => !cur);
-  }
+  useEffect(() => {
+    const handleResize = () => {
+      if (typeof window !== 'undefined') {
+        window.innerWidth >= 960 && setOpen(false);
+      }
+    };
 
-  React.useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpen(false)
-    );
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  React.useEffect(() => {
-    function handleScroll() {
-      if (window.scrollY > 0) {
-        setIsScrolling(true);
-      } else {
-        setIsScrolling(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (typeof window !== 'undefined') {
+        setIsScrolling(window.scrollY > 0);
       }
-    }
+    };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Function to handle navigation to the "Who We Are" section
   const navigateToWhoWeAre = () => {
     const section = document.getElementById("about-us");
     if (section) {
@@ -69,13 +59,17 @@ export function Navbar() {
     }
   };
 
-  // Function to handle navigation to the "What We Do" section
   const navigateToWhatWeDo = () => {
     const section = document.getElementById("we-do");
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  const navigateToDatasets = () => {
+    window.open('https://github.com/MVet-Platform/ELISA-ML/tree/main', '_blank', 'noopener,noreferrer');
+  };
+  
 
   return (
     <MTNavbar
@@ -109,10 +103,10 @@ export function Navbar() {
           }`}
         >
           <NavItem>Home</NavItem>
-          {/* Modify the "Who We Are" NavItem */}
           <NavItem onClick={navigateToWhoWeAre}>Who We Are</NavItem>
-          {/* Modify the "What We Do" NavItem */}
           <NavItem onClick={navigateToWhatWeDo}>What We Do</NavItem>
+          <NavItem onClick={navigateToDatasets}>Datasets</NavItem>
+          <NavItem onClick={navigateToDatasets}>Blog</NavItem>
         </ul>
         <div className="hidden gap-2 lg:flex lg:items-end">
           <IconButton
@@ -139,7 +133,7 @@ export function Navbar() {
         <IconButton
           variant="text"
           color={isScrolling ? "green" : "white"}
-          onClick={handleOpen}
+          onClick={() => setOpen(!open)}
           className="ml-auto inline-block lg:hidden"
         >
           {open ? (
@@ -153,10 +147,10 @@ export function Navbar() {
         <div className="container mx-auto mt-4 rounded-lg border-t border-blue-green-50 bg-white px-6 py-5">
           <ul className="flex flex-col text-black gap-4 text-blue-green-900">
             <NavItem>Home</NavItem>
-            {/* Modify the "Who We Are" NavItem */}
             <NavItem onClick={navigateToWhoWeAre}>Who We Are</NavItem>
-            {/* Modify the "What We Do" NavItem */}
             <NavItem onClick={navigateToWhatWeDo}>What We Do</NavItem>
+            <NavItem onClick={navigateToDatasets}>Datasets</NavItem>
+            <NavItem onClick={navigateToDatasets}>Blog</NavItem>
           </ul>
           <div className="mt-4 flex items-center gap-2">
             <a href="">

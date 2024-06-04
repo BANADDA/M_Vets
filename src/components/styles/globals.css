@@ -1,0 +1,22 @@
+/* styles/globals.css */
+
+.gallery-section {
+    @apply py-12 bg-gray-100;
+  }
+  
+  .gallery-swiper {
+    @apply w-full mb-8;
+  }
+  
+  .gallery-swiper img {
+    @apply w-full h-auto rounded-lg;
+  }
+  
+  .thumbnail-images {
+    @apply grid grid-cols-4 gap-4;
+  }
+  
+  .thumbnail-image img {
+    @apply w-full h-auto rounded-lg;
+  }
+  

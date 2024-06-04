@@ -1,14 +1,6 @@
-import React from "react";
+import { Card, CardBody, Typography } from "@material-tailwind/react";
 
-import { Typography, Card, CardBody } from "@material-tailwind/react";
-
-interface InfoCardProps {
-  title: string;
-  children: React.ReactNode;
-}
-
-
-export function InfoCard({ title, children }: InfoCardProps) {
+export function InfoCard({ title, children }) {
   return (
     <Card color="transparent" shadow={false}>
       <CardBody className="grid px-0">

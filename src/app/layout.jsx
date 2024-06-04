@@ -1,6 +1,5 @@
-import { FixedPlugin, Layout } from "@/components";
-import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
+import { FixedPlugin, Layout } from "../components";
 import "./globals.css";
 
 const roboto = Roboto({
@@ -9,15 +8,14 @@ const roboto = Roboto({
   display: "swap",
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "M-VET",
   description:
-"At MVet, we're dedicated to revolutionizing livestock health through the power of data and AI, with a special focus on addressing critical needs in Uganda's National Development Plan. Our collaborative efforts directly benefit livestock farmers, frontline veterinarians, animal production extensionists, and national livestock agencies."};
+    "At MVet, we're dedicated to revolutionizing livestock health through the power of data and AI, with a special focus on addressing critical needs in Uganda's National Development Plan. Our collaborative efforts directly benefit livestock farmers, frontline veterinarians, animal production extensionists, and national livestock agencies."
+};
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode;
 }) {
   return (
     <html lang="en">

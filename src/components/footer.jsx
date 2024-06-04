@@ -8,12 +8,13 @@ export function Footer() {
     <footer className="pb-5 p-10 md:pt-10">
       <div className="container flex flex-col mx-auto">
         <div className="flex !w-full py-10 mb-5 md:mb-20 flex-col justify-center !items-center bg-gray-900 max-w-6xl mx-auto rounded-2xl p-5 ">
-          <Typography
-            className="text-2xl md:text-3xl text-center font-bold "
-            color="white"
-          >
-            Ready to Make a Difference?
-          </Typography>
+        <Typography
+  className="text-2xl md:text-3xl text-center font-bold"
+  color="white"
+>
+  Ready to Make a Difference?
+</Typography>
+
           <Typography
             color="white"
             className=" md:w-7/12 text-center my-3 !text-base"
