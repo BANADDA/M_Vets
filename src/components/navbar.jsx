@@ -66,6 +66,11 @@ export function Navbar() {
     }
   };
 
+  const navigateToDatasets = () => {
+    window.open('https://github.com/MVet-Platform/ELISA-ML/tree/main', '_blank', 'noopener,noreferrer');
+  };
+  
+
   return (
     <MTNavbar
       fullWidth
@@ -100,7 +105,8 @@ export function Navbar() {
           <NavItem>Home</NavItem>
           <NavItem onClick={navigateToWhoWeAre}>Who We Are</NavItem>
           <NavItem onClick={navigateToWhatWeDo}>What We Do</NavItem>
-          <NavItem onClick={navigateToWhatWeDo}>Blog</NavItem>
+          <NavItem onClick={navigateToDatasets}>Datasets</NavItem>
+          <NavItem onClick={navigateToDatasets}>Blog</NavItem>
         </ul>
         <div className="hidden gap-2 lg:flex lg:items-end">
           <IconButton
@@ -143,7 +149,8 @@ export function Navbar() {
             <NavItem>Home</NavItem>
             <NavItem onClick={navigateToWhoWeAre}>Who We Are</NavItem>
             <NavItem onClick={navigateToWhatWeDo}>What We Do</NavItem>
-            <NavItem onClick={navigateToWhatWeDo}>Blog</NavItem>
+            <NavItem onClick={navigateToDatasets}>Datasets</NavItem>
+            <NavItem onClick={navigateToDatasets}>Blog</NavItem>
           </ul>
           <div className="mt-4 flex items-center gap-2">
             <a href="">
