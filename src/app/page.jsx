@@ -4,6 +4,7 @@ import { Footer, Navbar } from "../components";
 import Gallery from '../components/Gallery';
 import Team from '../components/Team';
 import Features from "./features";
+import Funders from './funders';
 import Hero from "./hero";
 import Partners from "./partners";
 import WhyChooseUs from "./why-choose-us";
@@ -19,8 +20,9 @@ export default function Campaign() {
       <VideoIntroWithNoSSR />
       <Features />
       <Gallery />
-      <Partners />
       <WhyChooseUs />
+      <Funders />
+      <Partners />
       <Team />
       <Footer />
     </>

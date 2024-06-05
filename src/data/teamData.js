@@ -15,7 +15,7 @@ const teamMembers = [
     bio: 'Hellen leverages her software development experience to create intelligent AI systems.'
   },
   {
-    name: 'Chodrine',
+    name: 'Chodrine Mutebi',
     position: 'Data & ML Engineer',
     bio: 'Chodrine specializes in creating cutting-edge data solutions and solving complex problems with machine learning.'
   },
@@ -25,7 +25,7 @@ const teamMembers = [
     bio: 'Mubarak develops innovative data solutions and drives data-driven projects with his passion for machine learning.'
   },
   {
-    name: 'Tobius',
+    name: 'Tobius Saul',
     position: 'Data & ML Engineer',
     bio: 'Tobius excels in developing high-quality machine learning models and driving impactful data initiatives.'
   },
@@ -35,7 +35,7 @@ const teamMembers = [
     bio: 'Hewit ensures seamless deployment and engages users with effective, user-friendly solutions.'
   },
   {
-    name: 'Joel',
+    name: 'Joel Ssematimba',
     position: 'Hardware Engineer',
     bio: 'Joel designs and implements robust hardware systems that integrate with our software.'
   }
