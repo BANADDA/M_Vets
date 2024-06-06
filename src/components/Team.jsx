@@ -9,11 +9,16 @@ export function Team() {
         {teamMembers.map(member => (
           <div 
             key={member.name} 
-            className="team-member bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl"
+            className="team-member bg-white p-3 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl"
           >
-            <h3 className="text-xl font-semibold text-center">{member.name}</h3>
-            <p className="text-center text-gray-600">{member.position}</p>
-            <p className="text-center text-gray-700 mt-2">{member.bio}</p>
+            <img 
+              src={member.img} 
+              alt={`${member.name}'s avatar`} 
+              className="w-20 h-20 mx-auto rounded-full object-cover"
+            />
+            <h3 className="text-base font-semibold text-center mt-3">{member.name}</h3>
+            <p className="text-center text-gray-600 text-sm">{member.position}</p>
+            <p className="text-center text-gray-700 text-sm mt-2">{member.bio}</p>
           </div>
         ))}
       </div>

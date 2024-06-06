@@ -90,7 +90,7 @@ export function Partners() {
                   className=" w-40 "
                 />
                 <Typography variant="small" className="p-2 font-normal text-gray-500">
-                  NARRO
+                NALRRI
                 </Typography>
               </CardBody>
             </Card>
