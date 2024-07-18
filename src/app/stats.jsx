@@ -28,7 +28,7 @@ const StatsContainer = () => {
             title="Farms" 
             value="512+" 
             percentage={15} 
-            icon={<AgricultureRounded />} 
+            icon={<AgricultureRounded />} //Testing
             color="text-green-500" 
           />
           <StatCard 
