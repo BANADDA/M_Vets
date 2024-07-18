@@ -7,6 +7,7 @@ import Features from "./features";
 import Funders from './funders';
 import Hero from "./hero";
 import Partners from "./partners";
+import StatsContainer from './stats';
 import WhyChooseUs from "./why-choose-us";
 
 // Dynamically import VideoIntro with SSR disabled
@@ -18,6 +19,7 @@ export default function Campaign() {
       <Navbar />
       <Hero />
       <VideoIntroWithNoSSR />
+      <StatsContainer/>
       <Features />
       <Gallery />
       <WhyChooseUs />
