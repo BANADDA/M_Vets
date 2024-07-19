@@ -12,9 +12,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "@heroicons/react": "",
     "@material-tailwind/react": "^2.1.9",
     "@material-ui/core": "",
+    "@mui/icons-material": "^5.16.4",
+    "@mui/material": "^5.16.4",
     "@types/leaflet": "",
     "@types/node": "^20.13.0",
     "@types/react": "",
@@ -33,6 +37,7 @@
     "react-leaflet": "^4.2.1",
     "react-leaflet-cluster": "^2.1.0",
     "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^6.23.1",
     "react-slick": "^0.30.2",
     "sharp": "^0.33.4",
     "slick-carousel": "^1.8.1",

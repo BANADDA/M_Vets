@@ -7,6 +7,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 function NavItem({ children, href, onClick }) {
@@ -106,7 +107,17 @@ export function Navbar() {
           <NavItem onClick={navigateToWhoWeAre}>Who We Are</NavItem>
           <NavItem onClick={navigateToWhatWeDo}>What We Do</NavItem>
           <NavItem onClick={navigateToDatasets}>Datasets</NavItem>
-          <NavItem onClick={navigateToDatasets}>Blog</NavItem>
+          <li>
+            <Link href="/blog">
+              <Typography
+                as="a"
+                variant="small"
+                className="font-bold"
+              >
+                Blog
+              </Typography>
+            </Link>
+          </li>
         </ul>
         <div className="hidden gap-2 lg:flex lg:items-end">
           <IconButton
@@ -150,7 +161,17 @@ export function Navbar() {
             <NavItem onClick={navigateToWhoWeAre}>Who We Are</NavItem>
             <NavItem onClick={navigateToWhatWeDo}>What We Do</NavItem>
             <NavItem onClick={navigateToDatasets}>Datasets</NavItem>
-            <NavItem onClick={navigateToDatasets}>Blog</NavItem>
+            <li>
+              <Link href="/blog">
+                <Typography
+                  as="a"
+                  variant="small"
+                  className="font-bold"
+                >
+                  Blog
+                </Typography>
+              </Link>
+            </li>
           </ul>
           <div className="mt-4 flex items-center gap-2">
             <a href="">
