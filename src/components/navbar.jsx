@@ -114,7 +114,7 @@ export function Navbar() {
                 variant="small"
                 className="font-bold"
               >
-                Blog
+                Blog & News
               </Typography>
             </Link>
           </li>

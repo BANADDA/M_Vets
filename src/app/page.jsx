@@ -26,6 +26,7 @@ export default function Campaign() {
       <Funders />
       <Partners />
       <Team />
+      {/* <Contact /> */}
       <Footer />
     </>
   );

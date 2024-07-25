@@ -1,50 +1,59 @@
-import Link from 'next/link';
-
-const blogs = [
-  {
-    id: 1,
-    title: 'How I Gave A Modern Look For HackerNews Feed',
-    date: 'Oct 10, 2020',
-    readTime: '5 min read',
-    description: 'Hello World 🔥 I made a website showing Hacker News and gave it a modern look...',
-    image: '/path_to_image', // Update with your image path
-  },
-  {
-    id: 2,
-    title: 'Revamped GitHub Jobs Website Using Design From Frontend',
-    date: 'Oct 12, 2020',
-    readTime: '6 min read',
-    description: 'Here is how I revamped the GitHub Jobs website using modern design principles...',
-    image: '/path_to_image', // Update with your image path
-  },
-  // Add more blogs here
-];
+// BlogList.jsx
+import { Facebook, LinkedIn, Twitter, YouTube } from '@mui/icons-material';
+import BlogPost from './BlogPost'; // Adjust the path as necessary
 
 const BlogList = () => {
+  const posts = [
+    {
+      rank: 1,
+      title: "Flavio Copes' Blog",
+      description: "JavaScript and Web Development Tutorials. Flavio is one of the most recognizable JavaScript bloggers, and has been publishing a new post every day for years. Each one is bite-sized and easy to digest.",
+      link: "https://flaviocopes.com",
+      tags: ["JavaScript", "ReactJS"],
+      points: 0,
+      imageSrc: "https://flaviocopes.com/assets/img/blog.png" // Replace with actual image URL
+    },
+    {
+      rank: 2,
+      title: "Aman Mittal's Blog",
+      description: "Aman often writes posts on React.js, React Native, and Node.js. These days his focus is on React Native and how to use it for cross-platform mobile development.",
+      link: "https://amanhimself.dev",
+      tags: ["JavaScript", "ReactJS"],
+      points: 0,
+      imageSrc: "https://amanhimself.dev/assets/img/blog.png" // Replace with actual image URL
+    }
+  ];
+
   return (
-    <div className="container mx-auto p-4">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-8">My Projects Showcase</h1>
-        <p className="text-xl mb-8">In this series, I will showcase some of the web development projects and challenges that I do every week.</p>
-      </div>
-      <div className="grid grid-cols-1 gap-8">
-        {blogs.map(blog => (
-          <div key={blog.id} className="flex flex-col md:flex-row bg-white shadow-md rounded-lg overflow-hidden">
-            <img src={blog.image} alt={blog.title} className="w-full md:w-1/3 h-48 object-cover"/>
-            <div className="p-4 flex flex-col justify-between">
-              <div>
-                <h2 className="text-2xl font-bold mb-2">
-                  <Link href={`/blog/${blog.id}`}>
-                    {blog.title}
-                  </Link>
-                </h2>
-                <p className="text-gray-600 mb-2">{blog.date} • {blog.readTime}</p>
-                <p className="text-gray-800">{blog.description}</p>
-              </div>
-              <Link href={`/blog/${blog.id}`} className="text-blue-500 mt-2">Read more</Link>
-            </div>
+    <div className="bg-gray-900 text-white p-8 min-h-screen">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="text-3xl font-bold">REACT.JS BLOGS</h2>
+          <div className="flex space-x-4 text-gray-400">
+            <span className="cursor-pointer text-blue-500">Trending now</span>
+            <span className="cursor-pointer">New</span>
+            <span className="cursor-pointer">Last 30 days</span>
           </div>
-        ))}
+        </div>
+        <div className="space-y-6">
+          {posts.map(post => (
+            <BlogPost key={post.rank} {...post} />
+          ))}
+        </div>
+        <div className="fixed left-0 top-1/2 transform -translate-y-1/2 space-y-4 ml-4">
+          <a href="https://facebook.com" className="text-blue-600">
+            <Facebook />
+          </a>
+          <a href="https://twitter.com" className="text-blue-600">
+            <Twitter />
+          </a>
+          <a href="https://linkedin.com" className="text-blue-600">
+            <LinkedIn />
+          </a>
+          <a href="https://youtube.com" className="text-blue-600">
+            <YouTube />
+          </a>
+        </div>
       </div>
     </div>
   );

@@ -1,19 +1,80 @@
 import { Button, IconButton, Typography } from "@material-tailwind/react";
+import emailjs from "emailjs-com";
+import { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const CURRENT_YEAR = new Date().getFullYear();
 const LINKS = ["Organisation", "About Us", "Team", "Products", "Blog"];
+const initialState = {
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
+};
 
 export function Footer() {
+  const [{ name, email, subject, message }, setState] = useState(initialState);
+  const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setState((prevState) => ({ ...prevState, [name]: value }));
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+    if (!name) newErrors.name = "Name is required";
+    if (!email) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      newErrors.email = "Email address is invalid";
+    }
+    if (!subject) newErrors.subject = "Subject is required";
+    if (!message) newErrors.message = "Message is required";
+    return newErrors;
+  };
+
+  const clearState = () => setState({ ...initialState });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formErrors = validateForm();
+    if (Object.keys(formErrors).length > 0) {
+      setErrors(formErrors);
+      return;
+    }
+
+    setLoading(true);
+    setErrors({});
+    emailjs
+      .sendForm("service_8v6syun", "template_ou88xf5", e.target, "8XQcAphyr4W8Y4DCs")
+      .then(
+        (result) => {
+          toast.success("Message sent successfully!");
+          clearState();
+        },
+        (error) => {
+          toast.error("Failed to send message. Please try again.");
+        }
+      )
+      .finally(() => {
+        setLoading(false);
+      });
+  };
+
   return (
     <footer className="pb-5 p-10 md:pt-10">
+      <ToastContainer />
       <div className="container flex flex-col mx-auto">
         <div className="flex !w-full py-10 mb-5 md:mb-20 flex-col justify-center !items-center bg-gray-900 max-w-6xl mx-auto rounded-2xl p-5 ">
-        <Typography
-  className="text-2xl md:text-3xl text-center font-bold"
-  color="white"
->
-  Ready to Make a Difference?
-</Typography>
+          <Typography
+            className="text-2xl md:text-3xl text-center font-bold"
+            color="white"
+          >
+            Ready to Make a Difference?
+          </Typography>
 
           <Typography
             color="white"
@@ -23,10 +84,80 @@ export function Footer() {
           </Typography>
           <div className="flex w-full md:w-fit gap-3 mt-2 flex-col md:flex-row">
             <Button color="white" size="md">
-            Explore M-Vet
+              Explore M-Vet
             </Button>
           </div>
         </div>
+
+        {/* Contact Us Section */}
+        <div className="flex flex-col md:flex-row justify-between items-center bg-gray-100 p-10 rounded-2xl mb-10">
+          <div className="md:w-1/2 flex flex-col items-start">
+            <Typography
+              className="text-lg md:text-xl font-bold mb-3"
+              color="blue-gray"
+            >
+              Contact Us
+            </Typography>
+            <Typography
+              color="blue-gray"
+              className="mb-3"
+            >
+              How can I help you? Fill in the form or drop an email 📬
+            </Typography>
+            <div className="flex items-center mb-2">
+              <i className="fa fa-phone mr-2" aria-hidden="true"></i>
+              <Typography color="blue-gray">+256 775 441448</Typography>
+            </div>
+            <div className="flex items-center mb-2">
+              <i className="fa fa-envelope mr-2" aria-hidden="true"></i>
+              <Typography color="blue-gray">mutembesa.daniel@gmail.com</Typography>
+            </div>
+          </div>
+          <div className="md:w-1/2 mt-5 md:mt-0">
+            <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                value={name}
+                onChange={handleChange}
+                className="border p-2 rounded"
+              />
+              {errors.name && <span className="text-red-500">{errors.name}</span>}
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={email}
+                onChange={handleChange}
+                className="border p-2 rounded"
+              />
+              {errors.email && <span className="text-red-500">{errors.email}</span>}
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                value={subject}
+                onChange={handleChange}
+                className="border p-2 rounded"
+              />
+              {errors.subject && <span className="text-red-500">{errors.subject}</span>}
+              <textarea
+                name="message"
+                placeholder="Message"
+                value={message}
+                onChange={handleChange}
+                className="border p-2 rounded"
+                rows="4"
+              ></textarea>
+              {errors.message && <span className="text-red-500">{errors.message}</span>}
+              <Button color="blue" size="md" type="submit" disabled={loading}>
+                {loading ? "Submitting..." : "Submit"}
+              </Button>
+            </form>
+          </div>
+        </div>
+
         <div className="flex flex-col md:flex-row items-center !justify-between">
           <Typography
             as="a"
