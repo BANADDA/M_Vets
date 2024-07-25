@@ -1,6 +1,8 @@
 import { Button, IconButton, Typography } from "@material-tailwind/react";
 import emailjs from "emailjs-com";
 import { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const CURRENT_YEAR = new Date().getFullYear();
 const LINKS = ["Organisation", "About Us", "Team", "Products", "Blog"];
@@ -50,11 +52,11 @@ export function Footer() {
       .sendForm("service_8v6syun", "template_ou88xf5", e.target, "8XQcAphyr4W8Y4DCs")
       .then(
         (result) => {
-          console.log(result.text);
+          toast.success("Message sent successfully!");
           clearState();
         },
         (error) => {
-          console.log(error.text);
+          toast.error("Failed to send message. Please try again.");
         }
       )
       .finally(() => {
@@ -64,6 +66,7 @@ export function Footer() {
 
   return (
     <footer className="pb-5 p-10 md:pt-10">
+      <ToastContainer />
       <div className="container flex flex-col mx-auto">
         <div className="flex !w-full py-10 mb-5 md:mb-20 flex-col justify-center !items-center bg-gray-900 max-w-6xl mx-auto rounded-2xl p-5 ">
           <Typography
@@ -85,7 +88,7 @@ export function Footer() {
             </Button>
           </div>
         </div>
-        
+
         {/* Contact Us Section */}
         <div className="flex flex-col md:flex-row justify-between items-center bg-gray-100 p-10 rounded-2xl mb-10">
           <div className="md:w-1/2 flex flex-col items-start">
@@ -109,10 +112,6 @@ export function Footer() {
               <i className="fa fa-envelope mr-2" aria-hidden="true"></i>
               <Typography color="blue-gray">mutembesa.daniel@gmail.com</Typography>
             </div>
-            {/* <div className="flex items-center">
-              <i className="fa fa-globe mr-2" aria-hidden="true"></i>
-              <Typography color="blue-gray">webflow</Typography>
-            </div> */}
           </div>
           <div className="md:w-1/2 mt-5 md:mt-0">
             <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
@@ -158,7 +157,7 @@ export function Footer() {
             </form>
           </div>
         </div>
-        
+
         <div className="flex flex-col md:flex-row items-center !justify-between">
           <Typography
             as="a"
