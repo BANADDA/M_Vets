@@ -108,7 +108,7 @@ export function Navbar() {
           <NavItem onClick={navigateToWhatWeDo}>What We Do</NavItem>
           <NavItem onClick={navigateToDatasets}>Datasets</NavItem>
           <li>
-            <Link href="/blog">
+            <Link href="/">
               <Typography
                 as="a"
                 variant="small"
