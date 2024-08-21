@@ -77,7 +77,7 @@ export function Navbar() {
   };
 
   const navigateToDatasets = () => {
-    window.open('https://github.com/MVet-Platform/ELISA-ML/tree/main', '_blank', 'noopener,noreferrer');
+    window.open('https://github.com/MVet-Platform', '_blank', 'noopener,noreferrer');
   };
   
 

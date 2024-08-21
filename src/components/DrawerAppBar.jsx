@@ -20,7 +20,7 @@ const navItems = [
   { label: 'Home', link: '/' },
   { label: 'About-US', link: '/about-us' },
   { label: 'What We Do', link: '/what-we-do' },
-  { label: 'Resources', link: 'https://github.com/MVet-Platform/ELISA-ML/tree/main', external: true },
+  { label: 'Resources', link: 'https://github.com/MVet-Platform', external: true },
 ];
 
 export default function DrawerAppBar(props) {
