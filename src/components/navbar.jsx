@@ -67,6 +67,15 @@ export function Navbar() {
     }
   };
 
+  const navigateToBlog = () => {
+    const section = document.getElementById("blog");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.location.href = '/blog';
+    }
+  };
+
   const navigateToDatasets = () => {
     window.open('https://github.com/MVet-Platform/ELISA-ML/tree/main', '_blank', 'noopener,noreferrer');
   };
@@ -107,17 +116,7 @@ export function Navbar() {
           <NavItem onClick={navigateToWhoWeAre}>Who We Are</NavItem>
           <NavItem onClick={navigateToWhatWeDo}>What We Do</NavItem>
           <NavItem onClick={navigateToDatasets}>Datasets</NavItem>
-          <li>
-            <Link href="/">
-              <Typography
-                as="a"
-                variant="small"
-                className="font-bold"
-              >
-                Blog & News
-              </Typography>
-            </Link>
-          </li>
+          <NavItem onClick={navigateToBlog}>Blog & News</NavItem>
         </ul>
         <div className="hidden gap-2 lg:flex lg:items-end">
           <IconButton
